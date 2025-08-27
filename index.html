@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Livros - Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <nav class="nav">
+                <h1 class="logo">Minhas Idéias :)</h1>
+                <div class="nav-links">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#sobre" class="nav-link">Sobre</a>
+                    <a href="#livros" class="nav-link">Livros</a>
+                    <a href="#contato" class="nav-link">Contato</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2 class="hero-title">Descubra Histórias que Transformam</h2>
+                    <p class="hero-subtitle">Conhecimento gratuito sobre crypto e histórias que nasceram do coração,
+                        tudo em um só lugar :D </p>
+                    <button class="cta-button" onclick="scrollToBooks()">
+                        <span>Explorar Livros</span>
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-elements">
+                        <div class="floating-book"></div>
+                        <div class="floating-book"></div>
+                        <div class="floating-book"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Section -->
+        <section id="sobre" class="sobre">
+            <div class="section-content">
+                <h2 class="section-title">Sobre o Autor</h2>
+                <div class="sobre-content">
+                    <div class="autor-image">
+                        <div class="image-placeholder">
+                            <img src="/image/Captura de tela 2025-08-27 142944.png" alt="Foto de Perfil">
+                        </div>
+                    </div>
+                    <div class="autor-text">
+                        <p>Olá! Eu sou a Natiely, estudante de Tecnologia e noiva apaixonada por criar histórias que
+                            conectam o mundo digital ao literário.
+                            Sou movida pela curiosidade, adoro aprender coisas novas, descobrir lugares incríveis e
+                            mergulhar em boas séries e filmes
+                            (sempre com um docinho do lado!). Quando não estou codificando ou escrevendo, você me
+                            encontra na academia haha ou explorando eventos, curtindo um
+                            Linkin Park no fone, e até mesmo em aventuras pela cidade com meu amado ao meu lado.
+                        </p>
+                        <p>Tenho um amor especial por cachorros e gatos, e acredito que as melhores inspirações vêm dos
+                            momentos simples da vida. Cada passeio,
+                            cada descoberta, cada experiência se transforma em combustível para minhas narrativas.Minhas
+                            histórias nascem dessa mistura única
+                            entre tecnologia e criatividade, sou uma jovem que encontra magia tanto numa linha de código
+                            bem escrita quanto numa frase que toca o
+                            coração. Bem-vindos ao meu universo! :D</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Livros Section -->
+        <section id="livros" class="livros">
+            <div class="section-content">
+                <h2 class="section-title">Meus Livros</h2>
+                <div class="books-grid">
+
+                    <!-- E-book -->
+                    <div class="book-card" data-book="ebook">
+                        <div class="book-cover">
+                            <div class="cover-placeholder">
+                                <img src="/image/Captura de tela 2025-08-27 145148.png" alt="Capa do E-book">
+                            </div>
+                            <div class="book-overlay">
+                                <button class="read-button" onclick="openBookModal('ebook')">
+                                    Ler Agora
+                                </button>
+                            </div>
+                        </div>
+                        <div class="book-info">
+                            <h3 class="book-title">O que São as CriptoMoedas?</h3>
+                            <p class="book-genre">Gênero • E-book</p>
+                            <p class="book-summary">
+                                Oi, lindeza! 💜 Este e-book foi feito com muito carinho especialmente para você que está
+                                curiosa sobre criptomoedas mas não sabe por onde começar. Aqui não tem complicação nem
+                                termos difíceis! Minha missão é fazer você se sentir confiante
+                                e segura para dar seus primeiros passos nesse universo de Cripto. Vem comigo nessa
+                                jornada? Tenho certeza de que você vai amar! 
+                            <div class="book-stats">
+                                <span class="stat">📖 Páginas: 19 </span>
+                                <span class="stat">⭐ Gratuito</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Livro  -->
+                    <div class="book-card" data-book="livro">
+                        <div class="book-cover">
+                            <div class="cover-placeholder">
+                                <p>Capa do Livro</p>
+                            </div>
+                            <div class="book-overlay">
+                                <button class="read-button" onclick="openBookModal('livro')">
+                                    Ver Detalhes
+                                </button>
+                            </div>
+                        </div>
+                        <div class="book-info">
+                            <h3 class="book-title">Título do Seu Livro</h3>
+                            <p class="book-genre">Gênero • Livro Físico</p>
+                            <p class="book-summary">
+                                Descrição cativante do seu livro físico. Conte o que torna esta obra especial e por que
+                                os leitores vão se apaixonar pela história.
+                            </p>
+                            <div class="book-stats">
+                                <span class="stat">📚 Páginas: 280</span>
+                                <span class="stat">⭐ Gratuito</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato Section -->
+        <section id="contato" class="contato">
+            <div class="section-content">
+                <h2 class="section-title">Entre em Contato</h2>
+                <div class="contato-content">
+                    <div class="contato-info">
+                        <p>Tem alguma pergunta sobre os livros? Quer saber sobre próximos lançamentos? Entre em contato!
+                        </p>
+                        <div class="social-links">
+                            <!--<a href="#" class="social-link">📧 Email</a> -->
+                            <a href="https://www.instagram.com/nahtiely/" class="social-link">📱 Instagram</a>
+                            <!--<a href="#" class="social-link">🐦 Twitter</a> -->
+                            <a href="https://www.linkedin.com/in/natiely-alves-8b231a275/" class="social-link">💼 LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal para visualizar livros -->
+    <div id="book-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeBookModal()">&times;</span>
+            <div id="modal-body">
+                <!-- Conteúdo será inserido via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
