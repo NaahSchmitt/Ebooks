@@ -94,7 +94,7 @@ function openBookModal(bookType) {
         <div class="modal-book-content">
             <div class="modal-book-details">
                 <div class="modal-cover-placeholder">
-                    <img src="/image/Captura de tela 2025-08-27 145148.png" alt="Capa do ${book.title}">
+                    <img src="https://naahschmitt.github.io/Ebooks/image/cover.png" alt="Capa do ${book.title}">
                 </div>
                 <div class="modal-book-info">
                     <h2 class="modal-book-title">${book.title}</h2>
